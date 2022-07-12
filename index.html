@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="paint.css">
+    </head>
+    <body>
+        <div class="content">
+            <div class="explane">
+                <h1 class="title">Generate a</h1>
+                <h1 id="green">random password</h1>
+                <p>Never use unsecure password again</p>
+            </div>
+            <div class="buttons">
+                <button id="c1" onclick="c1Switch()">Numbers</button>
+                <button id="c2" onclick="c2Switch()">Symbols (%$@...) </button>
+                <button id="button" onclick="generate()">Generate Password</button>
+            </div>
+            <div class="output">
+                <h1 class="pass" id="password1">password #1</h1>
+                <h1 class="pass" id="password2">password #2</h1>
+            </div>
+            <script src="engine.js"></script>
+        </div>
+    </body>
+</html>

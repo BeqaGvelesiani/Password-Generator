@@ -10,6 +10,7 @@ h1 {
 body {
   font-family: "Inter", sans-serif;
   background-color: #2f3e538f;
+  display: flex;
 }
 
 .content {
@@ -21,8 +22,10 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
+  padding: 2rem;
   height: fit-content;
+  margin: auto;
+  max-height: 90vh;
 }
 
 p {
@@ -36,9 +39,10 @@ p {
 
 .buttons {
   border-bottom: 1px solid #2f3e53;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
-  font-size: 3rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  display: grid;
 }
 
 #button {
@@ -47,15 +51,16 @@ p {
   color: #ffffff;
   font-size: 2rem;
   font-weight: bolder;
-  display: block;
   margin-bottom: 2rem;
 }
 
 .output {
-  display: flex;
+  display: grid;
   justify-content: space-around;
+  gap: 1rem;
   text-align: center;
   margin-top: 30px;
+  display: flex ;
 }
 
 .pass {
@@ -71,7 +76,7 @@ p {
 
 #c1,
 #c2 {
-  background-color: #10b981;
+  background-color: green;
   border-radius: 5px;
   color: #ffffff;
   font-size: 2rem;
@@ -80,31 +85,34 @@ p {
   margin-top: 2rem;
   box-shadow: 0px 0px 30px 3px green;
   cursor: pointer;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 8px;
 }
 
 #button {
   margin: 1rem auto;
   background-color: #1f2937;
   padding: 1rem;
-
+margin-top: 4rem;
   animation: backlight 3000ms infinite linear;
 }
 
 @keyframes backlight {
   0% {
-    box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 3px green,
-      calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 3px red,
-      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 5px rgb(38, 0, 255);
+    box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 10px green,
+      calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 12px red,
+      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 15px rgb(38, 0, 255);
   }
   25% {
     box-shadow: calc(15px * sin(90deg)) calc(15px * cos(90deg)) 60px 3px green,
-      calc(15px * sin(210deg)) calc(15px * cos(210deg)) 30px 3px red,
+      calc(15px * sin(210deg)) calc(15px * cos(210deg)) 30px 7px red,
       calc(15px * sin(330deg)) calc(15px * cos(330deg)) 60px 5px rgb(38, 0, 255);
   }
   50% {
     box-shadow: calc(15px * sin(180deg)) calc(15px * cos(180deg)) 30px 3px green,
       calc(15px * sin(300deg)) calc(15px * cos(300deg)) 60px 3px red,
-      calc(15px * sin(60deg)) calc(15px * cos(60deg)) 30px 5px rgb(38, 0, 255);
+      calc(15px * sin(60deg)) calc(15px * cos(60deg)) 30px 9px rgb(38, 0, 255);
   }
   75% {
     box-shadow: calc(15px * sin(270deg)) calc(15px * cos(270deg)) 60px 3px green,
@@ -112,8 +120,8 @@ p {
       calc(15px * sin(180deg)) calc(15px * cos(180deg)) 60px 5px rgb(38, 0, 255);
   }
   100% {
-    box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 3px green,
-      calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 3px red,
-      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 5px rgb(38, 0, 255);
+    box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 10px green,
+      calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 12px red,
+      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 15px rgb(38, 0, 255);
   }
 }

@@ -1,7 +1,5 @@
 const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-
 const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
 
 const condition1 = letters.concat(numbers,symbols);
@@ -43,8 +41,8 @@ function c2Switch(){
 }
 
 function generate() {
-    pass1.textContent = "";
-    pass2.textContent = "";
+    pass1.value = "";
+    pass2.value = "";
 
     if (button1 === "on" && button2 === "on"){
         world = condition1;
@@ -57,8 +55,8 @@ function generate() {
     }
 
     for (var i=0; i<numberOfSymbol; i++){
-        pass1.textContent += world[random(0,world.length-1)];
-        pass2.textContent += world[random(0,world.length-1)];
+        pass1.value += world[random(0,world.length-1)];
+        pass2.value += world[random(0,world.length-1)];
     }
     pass1.style.color = "#10B981";
     pass2.style.color = "#10B981";
@@ -79,7 +77,7 @@ function cheker(a){
 
 function c1_off(){
     c1.style.color = "black";
-    c1.style.backgroundColor = "none";
+    c1.style.backgroundColor = "rgba(84, 255, 84, 0.13)";
     c1.style.boxShadow = "none";
     button1 = "off";
 }
@@ -93,7 +91,7 @@ function c1_on(){
 
 function c2_off(){
     c2.style.color = "black";
-    c2.style.backgroundColor = "none";
+    c2.style.backgroundColor = "rgba(84, 255, 84, 0.13)";
     c2.style.boxShadow = "none";
     button2 = "off";
 }
@@ -104,3 +102,20 @@ function c2_on(){
     c2.style.boxShadow = "0px 0px 30px 3px green";
     button2 = "on";
 }
+
+// function myFunction(a) {
+//   // Get the text field
+//   var copyText = document.getElementById(`${a}`);
+
+//   // Select the text field
+//   copyText.select();
+//   copyText.setSelectionRange(0, 99999); // For mobile devices
+
+//   // Copy the text inside the text field
+//   navigator.clipboard.writeText(copyText.value);
+
+//   // Alert the copied text
+//   alert("Copied the text: " + copyText.value);
+// }
+
+//pass1.addEventListener("click", myFunction("password1"));

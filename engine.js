@@ -78,25 +78,29 @@ function cheker(a){
 }
 
 function c1_off(){
-    c1.style.color = "#10B981";
-    c1.style.backgroundColor = "#ffffff";
+    c1.style.color = "black";
+    c1.style.backgroundColor = "none";
+    c1.style.boxShadow = "none";
     button1 = "off";
 }
 
 function c1_on(){
-    c1.style.color = "#ffffff";
-    c1.style.backgroundColor = "#10B981";
+    c1.style.color = "white";
+    c1.style.backgroundColor = "green";
+    c1.style.boxShadow = "0px 0px 30px 3px green";
     button1 = "on";
 }
 
 function c2_off(){
-    c2.style.color = "#10B981";
-    c2.style.backgroundColor = "#ffffff";
+    c2.style.color = "black";
+    c2.style.backgroundColor = "none";
+    c2.style.boxShadow = "none";
     button2 = "off";
 }
 
 function c2_on(){
-    c2.style.color = "#ffffff";
-    c2.style.backgroundColor = "#10B981";
+    c2.style.color = "white";
+    c2.style.backgroundColor = "green";
+    c2.style.boxShadow = "0px 0px 30px 3px green";
     button2 = "on";
 }

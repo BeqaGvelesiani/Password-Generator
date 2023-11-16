@@ -1,93 +1,119 @@
 h1 {
-    color: #ffffff;
-    font-size: 2rem;
+  color: #ffffff;
+  font-size: 2rem;
 }
 
 .explane {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  background-color: #2f3e538f;
 }
 
 .content {
-    background-color: #1F2937;
-    width: 70vw;
-    min-width: 1000px;
-    border: 5px solid rgb(221, 150, 18);
-    border-radius: 20px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px;
-    height: fit-content;
+  background-color: #1f2937;
+  width: 70vw;
+  min-width: 1000px;
+  border: 5px solid rgb(221, 150, 18);
+  border-radius: 20px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  height: fit-content;
 }
 
 p {
-    color: #ffffff;
-    font-size: 2rem;
+  color: #ffffff;
+  font-size: 2rem;
 }
 
 #green {
-    color: #10B981;
+  color: #10b981;
 }
 
 .buttons {
-    border-bottom: 1px solid #2F3E53;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-    font-size: 3rem;
-    
+  border-bottom: 1px solid #2f3e53;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 3rem;
 }
 
 #button {
-    background-color: #10B981;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: bolder;
-    display: block;
-    margin-bottom: 2rem;
+  background-color: #10b981;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 2rem;
 }
 
 .output {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .pass {
-    background-color: #273549;
-    border-radius: 4px;
-    width: fit-content;
-    color: #1F2937;
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
-    padding: 1rem;
+  background-color: #273549;
+  border-radius: 4px;
+  width: 25rem;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: lighter;
+  text-align: center;
+  padding: 1rem;
 }
 
-#c1, 
+#c1,
 #c2 {
-    background-color: #10B981;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: bolder;
-    display: flex;
-    margin-top: 2rem;
+  background-color: #10b981;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bolder;
+  display: flex;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 30px 3px green;
+  cursor: pointer;
 }
 
 #button {
-    margin: 1rem auto;
-    background-color: #1F2937;
-    padding: 1rem;
-    box-shadow: 10px 5px 30px 3px green, -10px -5px 30px 3px red, 5px -10px 30px 5px rgb(38, 0, 255);
-    
+  margin: 1rem auto;
+  background-color: #1f2937;
+  padding: 1rem;
+
+  animation: backlight 3000ms infinite linear;
 }
 
-
-
-
+@keyframes backlight {
+  0% {
+    box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 3px green,
+      calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 3px red,
+      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 5px rgb(38, 0, 255);
+  }
+  25% {
+    box-shadow: calc(15px * sin(90deg)) calc(15px * cos(90deg)) 60px 3px green,
+      calc(15px * sin(210deg)) calc(15px * cos(210deg)) 30px 3px red,
+      calc(15px * sin(330deg)) calc(15px * cos(330deg)) 60px 5px rgb(38, 0, 255);
+  }
+  50% {
+    box-shadow: calc(15px * sin(180deg)) calc(15px * cos(180deg)) 30px 3px green,
+      calc(15px * sin(300deg)) calc(15px * cos(300deg)) 60px 3px red,
+      calc(15px * sin(60deg)) calc(15px * cos(60deg)) 30px 5px rgb(38, 0, 255);
+  }
+  75% {
+    box-shadow: calc(15px * sin(270deg)) calc(15px * cos(270deg)) 60px 3px green,
+      calc(15px * sin(30deg)) calc(15px * cos(30deg)) 30px 3px red,
+      calc(15px * sin(180deg)) calc(15px * cos(180deg)) 60px 5px rgb(38, 0, 255);
+  }
+  100% {
+    box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 3px green,
+      calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 3px red,
+      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 5px rgb(38, 0, 255);
+  }
+}

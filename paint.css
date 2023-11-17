@@ -60,10 +60,11 @@ p {
   gap: 1rem;
   text-align: center;
   margin-top: 30px;
-  display: flex ;
+  display: flex;
 }
 
 .pass {
+  animation:  2000ms infinite linear;
   background-color: #273549;
   border-radius: 4px;
   width: 25rem;
@@ -72,6 +73,11 @@ p {
   font-weight: lighter;
   text-align: center;
   padding: 1rem;
+  
+}
+
+.passAnim{
+  animation-name: blink;
 }
 
 #c1,
@@ -94,7 +100,7 @@ p {
   margin: 1rem auto;
   background-color: #1f2937;
   padding: 1rem;
-margin-top: 4rem;
+  margin-top: 4rem;
   animation: backlight 3000ms infinite linear;
 }
 
@@ -102,7 +108,8 @@ margin-top: 4rem;
   0% {
     box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 10px green,
       calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 12px red,
-      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 15px rgb(38, 0, 255);
+      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 15px
+        rgb(38, 0, 255);
   }
   25% {
     box-shadow: calc(15px * sin(90deg)) calc(15px * cos(90deg)) 60px 3px green,
@@ -122,6 +129,23 @@ margin-top: 4rem;
   100% {
     box-shadow: calc(15px * sin(0deg)) calc(15px * cos(0deg)) 30px 10px green,
       calc(15px * sin(120deg)) calc(15px * cos(120deg)) 60px 12px red,
-      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 15px rgb(38, 0, 255);
+      calc(15px * sin(240deg)) calc(15px * cos(240deg)) 30px 15px
+        rgb(38, 0, 255);
+  }
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0px 0px 30px 2px green;
+  }
+ 
+
+  50% {
+    box-shadow: 0px 0px 30px 25px green;
+  }
+
+
+  100% {
+    box-shadow: 0px 0px 30px 2px green;
   }
 }

@@ -1,8 +1,91 @@
-const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const letters = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
+const symbols = [
+  "~",
+  "`",
+  "!",
+  "@",
+  "#",
+  "$",
+  "%",
+  "^",
+  "&",
+  "*",
+  "(",
+  ")",
+  "_",
+  "-",
+  "+",
+  "=",
+  "{",
+  "[",
+  "}",
+  "]",
+  ",",
+  "|",
+  ":",
+  ";",
+  "<",
+  ">",
+  ".",
+  "?",
+  "/",
+];
 
-const condition1 = letters.concat(numbers,symbols);
+const condition1 = letters.concat(numbers, symbols);
 const condition2 = letters.concat(numbers);
 const condition3 = letters.concat(symbols);
 const condition4 = letters;
@@ -20,102 +103,98 @@ let button1 = "on";
 let button2 = "on";
 let world;
 
-function c1Switch(){
-    a = cheker(indicator1)
-    if (a === false){
-        c1_on();
-    }else{
-        c1_off();
-    }
-    indicator1 +=1;
+function c1Switch() {
+  a = cheker(indicator1);
+  if (a === false) {
+    c1_on();
+  } else {
+    c1_off();
+  }
+  indicator1 += 1;
 }
 
-function c2Switch(){
-    b = cheker(indicator2)
-    if (b === false){
-        c2_on();
-    }else{
-        c2_off();
-    }
-    indicator2 +=1;
+function c2Switch() {
+  b = cheker(indicator2);
+  if (b === false) {
+    c2_on();
+  } else {
+    c2_off();
+  }
+  indicator2 += 1;
 }
 
 function generate() {
-    pass1.value = "";
-    pass2.value = "";
+  pass1.innerText = "";
+  pass2.innerText = "";
 
-    if (button1 === "on" && button2 === "on"){
-        world = condition1;
-    }else if(button1 === "on" && button2 === "off"){
-        world = condition2;
-    }else if(button1 === "off" && button2 === "on"){
-        world = condition3;
-    }else if(button1 === "off" && button2 === "off"){
-        world = condition4;
-    }
+  if (button1 === "on" && button2 === "on") {
+    world = condition1;
+  } else if (button1 === "on" && button2 === "off") {
+    world = condition2;
+  } else if (button1 === "off" && button2 === "on") {
+    world = condition3;
+  } else if (button1 === "off" && button2 === "off") {
+    world = condition4;
+  }
 
-    for (var i=0; i<numberOfSymbol; i++){
-        pass1.value += world[random(0,world.length-1)];
-        pass2.value += world[random(0,world.length-1)];
-    }
-    pass1.style.color = "#10B981";
-    pass2.style.color = "#10B981";
+  for (var i = 0; i < numberOfSymbol; i++) {
+    pass1.innerText += world[random(0, world.length - 1)];
+    pass2.innerText += world[random(0, world.length - 1)];
+  }
+  pass1.style.color = "#10B981";
+  pass2.style.color = "#10B981";
+  pass1.className += "passAnim";
+  pass2.className += "passAnim";
 }
 
-function random(a,b){
-    let i = b-a+1;
-    return Math.floor(Math.random()*i) + a;
+function random(a, b) {
+  let i = b - a + 1;
+  return Math.floor(Math.random() * i) + a;
 }
 
-function cheker(a){
-    if (a%2 === 0){
-        return true;
-    }else{
-        return false;
-    }
+function cheker(a) {
+  if (a % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-function c1_off(){
-    c1.style.color = "black";
-    c1.style.backgroundColor = "rgba(84, 255, 84, 0.13)";
-    c1.style.boxShadow = "none";
-    button1 = "off";
+function c1_off() {
+  c1.style.color = "black";
+  c1.style.backgroundColor = "rgba(84, 255, 84, 0.13)";
+  c1.style.boxShadow = "none";
+  button1 = "off";
 }
 
-function c1_on(){
-    c1.style.color = "white";
-    c1.style.backgroundColor = "green";
-    c1.style.boxShadow = "0px 0px 30px 3px green";
-    button1 = "on";
+function c1_on() {
+  c1.style.color = "white";
+  c1.style.backgroundColor = "green";
+  c1.style.boxShadow = "0px 0px 30px 3px green";
+  button1 = "on";
 }
 
-function c2_off(){
-    c2.style.color = "black";
-    c2.style.backgroundColor = "rgba(84, 255, 84, 0.13)";
-    c2.style.boxShadow = "none";
-    button2 = "off";
+function c2_off() {
+  c2.style.color = "black";
+  c2.style.backgroundColor = "rgba(84, 255, 84, 0.13)";
+  c2.style.boxShadow = "none";
+  button2 = "off";
 }
 
-function c2_on(){
-    c2.style.color = "white";
-    c2.style.backgroundColor = "green";
-    c2.style.boxShadow = "0px 0px 30px 3px green";
-    button2 = "on";
+function c2_on() {
+  c2.style.color = "white";
+  c2.style.backgroundColor = "green";
+  c2.style.boxShadow = "0px 0px 30px 3px green";
+  button2 = "on";
 }
 
-// function myFunction(a) {
-//   // Get the text field
-//   var copyText = document.getElementById(`${a}`);
+pass1.addEventListener("click", function () {
+  navigator.clipboard.writeText(pass1.innerText);
 
-//   // Select the text field
-//   copyText.select();
-//   copyText.setSelectionRange(0, 99999); // For mobile devices
+  alert("Copied the text: " + pass1.innerText);
+});
 
-//   // Copy the text inside the text field
-//   navigator.clipboard.writeText(copyText.value);
-
-//   // Alert the copied text
-//   alert("Copied the text: " + copyText.value);
-// }
-
-//pass1.addEventListener("click", myFunction("password1"));
+pass2.addEventListener("click", function () {
+  navigator.clipboard.writeText(pass2.innerText);
+  alert("Copied the text: " + pass1.innerText);
+});
